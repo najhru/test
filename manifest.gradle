@@ -1,6 +1,6 @@
-  productBranch = 'v2.56'
-  kernelBranch = 'kernel1_15_30'
-  webMainBranch = 'v32'
+  productBranch = 'test'
+  kernelBranch = 'test'
+  webMainBranch = 'test'
 
   product = [
           root: [repository: 'finroot.git',               path: '.',                   ref: productBranch],
