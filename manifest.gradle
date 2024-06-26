@@ -1,0 +1,29 @@
+  productBranch = 'v2.56'
+  kernelBranch = 'kernel1_15_30'
+  webMainBranch = 'v32'
+
+  product = [
+          root: [repository: 'finroot.git',               path: '.',                   ref: productBranch],
+          modules: [
+                  [repository: 'azk2.git',                path: 'azk2',                ref: productBranch],
+                  [repository: 'core.git',                path: 'core',                ref: kernelBranch],
+                  [repository: 'dominant.git',            path: 'dominant',            ref: kernelBranch],
+                  [repository: 'kernel.git',              path: 'kernel',              ref: kernelBranch],
+                  [repository: 'module_core.git',       path: 'module/core',         ref: kernelBranch],     
+                  [repository: 'module_crypto.git',       path: 'module/crypto',       ref: kernelBranch],
+                  [repository: 'module_bft.dict.git',     path: 'module/bft.dict',     ref: webMainBranch],
+                  [repository: 'module_bft.budget.git',   path: 'module/bft.budget',   ref: webMainBranch],
+                  [repository: 'module_bft.goods.git',    path: 'module/bft.goods',    ref: webMainBranch],
+                  [repository: 'module_bft.rro.git',      path: 'module/bft.rro',      ref: webMainBranch],         
+                  [repository: 'module_bft.planchar.git', path: 'module/bft.planchar', ref: webMainBranch]
+          ]
+  ]
+
+  assemble = [
+          url: 'ssh://git@bitbucket.bftcom.com:7998/rt/fin',
+          branch: productBranch
+  ]
+
+  gitRepos = [
+          urlPrefix: 'ssh://git@bitbucket.bftcom.com:7998/rt/'
+  ]
